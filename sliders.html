@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sliders</title>
+</head>
+
+<body>
+    <section>
+        <img class= "mySlides" src="3d7b88134ce56626139c6528fe8ba59b.jpg" alt="Food 1" width="300">
+        <img class= "mySlides" src="TN-huHevy9Vmzh8FeMcAV48tFeRyPsoiY-ltUjjDAornSgMLV0hMxUQe73i6Dnw_ZTmRwZaFmHjOo0jrQCIf7g.webp"  alt="food 2" width="300">
+
+    </section>
+    <script>
+        
+        var myIndex = 0;
+        carousel();
+
+        function carousel(){
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for(i = 0; i < x.length; i++){
+              x[i].style.display = "none";
+            }
+            myIndex++;
+            if(myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
+
+</body>
+
+</html>
